@@ -11,7 +11,12 @@ def index():
 
 @app.route("/contato")
 def contato():
-    return render_template("contato.html")
+    return render_template ("contato.html", tel = "(87) 99643-3562", email = "josericardo1@aluno.ifsertao-pe.edu.br")
+
+@app.route("/operaçao/<int: num1>/<int:num2>")
+def operaçao(num1, num2):
+    resultado = num1 + num2
+    return 
 
 if __name__ == '__main__':
     app.run()
